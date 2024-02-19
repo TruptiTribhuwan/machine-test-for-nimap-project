@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>edit</title>
+  </head>
+  <body>
+    {% include 'myapp/navbar.html' %}
+
+
+    <div style= "height:500px; width: 500px; background-color: aqua; margin-left:500px; margin-top: 100px;">
+      <h2 style="text-align: center;">Edit</h2><hr>
+   <form action="" method="POST">
+    {% csrf_token %}
+   <span>roll<input type="text" name="roll" id="" value="{{std.roll}}"> </span><br><br>
+   <span>name: <input type="text" name="name" id="" value="{{std.name}}"> </span><br><br>
+   <span>Created by: <input type="text" name="cb" id="" value="{{std.createdby}}"> </span><br><br>
+   <span>Project name: <input type="text" name="pn" id="" value="{{std.Project}}"> </span><br><br>
+   <!-- <span>Assigned User:
+        <select name="user" id="">
+           {% for i in data1 %}
+           <option value="name">{{i.name}}</option>
+           {%endfor%}
+        </select> -->
+
+                    
+   </span><br><br>
+   
+   <button type="submit">submit</button>
+   </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
